@@ -1,0 +1,44 @@
+body {
+    font-family: monospace;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 5px;
+    margin: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+pre {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px;
+    height: 150px;
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>P2P通信デバッグ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>P2P通信デバッグ</h1>
+    
+    <fieldset>
+        <legend>接続設定</legend>
+        <button onclick="startHost()">ホスト起動</button>
+        <button onclick="connectClient()">接続</button>
+        <button onclick="disconnect()">切断</button>
+        <div style="margin-top: 10px; font-size: 11px; color: #666;">
+            ※ホストIDはmain.jsの設定で変更できます
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend>ステータス</legend>
+        <pre id="status">未接続</pre>
+    </fieldset>
+    
+    <fieldset>
+        <legend>送信</legend>
+        <input type="text" id="msg" placeholder="メッセージ" size="40">
+        <button onclick="sendMsg()">送信</button>
+        <br>
+        <div style="margin-top: 10px;">
+            <strong>クイック送信:</strong><br>
+            <button onclick="p2p.sendMessage('LED_ON')">LED_ON</button>
+            <button onclick="p2p.sendMessage('LED_OFF')">LED_OFF</button>
+            <button onclick="p2p.sendMessage('PING')">PING</button>
+            <button onclick="p2p.sendMessage('START')">START</button>
+            <button onclick="p2p.sendMessage('STOP')">STOP</button>
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend>ログ（送受信）</legend>
+        <pre id="log"></pre>
+    </fieldset>
+    
+    <!-- PeerJS CDN -->
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script src="m_winp2p.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
